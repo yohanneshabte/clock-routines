@@ -10,7 +10,7 @@
 	--vanilla-calendar-bg-color: rgb(0, 0, 0);
 	--vanilla-calendar-border-radius: 0px;
 	--vanilla-calendar-border-color: #4c4c4c;
-	--vanilla-calendar-today-bg-color: #25384a;
+	--vanilla-calendar-today-bg-color: #25384a !important;
 	--vanilla-calendar-today-color: rgb(255, 255, 255);
 	--vanilla-calendar-selected-bg-color: #000000;
 	--vanilla-calendar-selected-color: #4c4c4c;
@@ -21,8 +21,8 @@
 
 html,
 body {
-	background-color: var(--background-color);
-	color: #ffffff;
+	background-color: #000000 !important;
+	color: #ffffff !important;
 	height: 100%;
 	width: 100%;
 }
@@ -53,6 +53,55 @@ body {
 	border: 6vh solid #303030;
 }
 
+#sidebar {
+	min-height: 100%;
+	width: 20%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 9999;
+}
+#sidebar nav {
+	height: 70px;
+}
+
+#detailModal .modal-dialog {
+	
+	position: absolute;
+  	top: 10%;
+  	right:10%;
+}
+
+#switch24 {
+	position: fixed;
+	right: 2%;
+	top: 1%;
+	z-index: 9998;
+	font-family: 'Roboto', sans-serif;
+}
+#switch24 span {
+	font-weight: 900;
+	padding-left: 15px;
+	margin-right: 5px;
+	border-left: 2px solid white;
+}
+
+#nav-switch {
+	max-height: 50px;
+}
+#nav-switch a {
+	border-radius: 0 !important;
+	height: 50px;
+}
+
+#accordion .card {
+	border-radius: 0 !important;
+}
+
+#todo-content input {
+	margin-left: 10px !important;
+}
 /* --------------- SVG --------------- */
 
 svg {
@@ -71,7 +120,9 @@ svg g path:hover {
 	fill-rule: evenodd;
 
 }
-
+svg g text {
+	
+}
 svg g text textPath {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 50%;
@@ -168,7 +219,7 @@ svg g text textPath tspan {
 	position: absolute;
 	height: 40vh;
 	width: 40vh;
-	background-color: var(--background-color);
+	background-color: #000;
 	border-radius: 50%;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 8.5vh;
